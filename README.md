@@ -1,60 +1,60 @@
-# 🎪 Real-Time Event Platform: Mini-Games & Advanced Reward Systems
+# 🎪 All-Projects: Real-Time Event & Academic Management Ecosystem
 
-A production-ready Monorepo showcasing a full-stack, real-time festival platform. This project integrates micro-features across two major systems: a high-concurrency real-time mini-game environment and an enterprise-grade reward randomization engine.
+ยินดีต้อนรับสู่คลังซอร์สโค้ดรวม (Monorepo) สำหรับการพัฒนาระบบนิเวศทางซอฟต์แวร์ที่หลากหลาย โปรเจกต์นี้เป็นการรวบรวม 3 แพลตฟอร์มหลักที่แสดงถึงทักษะการพัฒนาซอฟต์แวร์แบบ Full-Stack ทั้งในส่วนของระบบเว็บเกมแบบเรียลไทม์ (Real-Time Web Platform) แดชบอร์ดบริหารจัดการข้อมูลขั้นสูง (Data Administration Dashboard) และแอปพลิเคชันบนมือถือ (Cross-Platform Mobile Application)
 
 ---
 
-## 🚀 System Architecture Overview
+## 📂 โครงสร้างและการแยกส่วนประกอบของโปรเจกต์ (Project Components)
 
-This repository is structured as a **Monorepo** to demonstrate clean separation of concerns, modern API design, and robust database architectures.
+ภายใน Repository นี้ถูกแบ่งออกเป็น 3 ส่วนหลักตามสถาปัตยกรรมซอฟต์แวร์อย่างชัดเจน:
 
-### 1. 🎮 [Real-Time Mini-Game Platform](./Real-Time%20Festival%20Prize%20Mini%20Game%20Platform)
-A high-engagement, real-time gaming core built for concurrent festival environments.
-*   **Frontend (Game Engine):** Built with **Phaser 3 (JavaScript)** to deliver low-latency, interactive visual assets and smooth multi-hit game mechanics.
-*   **Backend (Real-Time Service):** Developed using **Go (Golang)** with an event-driven **WebSocket** architecture to handle state synchronization across player lobbies.
-*   **Key Highlights:** Real-time synchronized room management (Lobby), sequential game state control, and complex collision/interaction scoring.
+### 1. 🎮 [Real-Time Festival Prize Mini Game Platform](./Real-Time%20Festival%20Prize%20Mini%20Game%20Platform)
+แพลตฟอร์มมินิเกมงานวัดแบบ Real-Time ที่มุ่งเน้นการรองรับผู้ใช้งานจำนวนมากพร้อมกัน (High Concurrency)
+*   **Frontend (Game Engine):** พัฒนาด้วย **Phaser 3 (JavaScript)** มุ่งเน้นการจัดการทรัพยากรเกม, ระบบตรวจจับการชน (Collision) และการทำมินิเกมงานวัด เช่น เกมตักปลา, เกมจับคู่มวยไทย และเกมปาลูกโป่ง (ระบบยิง 2 นัดแตก)
+*   **Backend (Real-Time Server):** พัฒนาด้วย **ภาษา Go (Golang)** ออกแบบสถาปัตยกรรมแบบ Event-driven ผ่าน **WebSocket** เพื่อควบคุมห้องพักคอย (Lobby System) และจัดลำดับการเล่นเกมพร้อมกันแบบเรียลไทม์
+*   *👉 รายละเอียดเชิงลึกและวิธีรันระบบ: [อ่านต่อที่คู่มือ Mini Game Platform](./Real-Time%20Festival%20Prize%20Mini%20Game%20Platform/README.md)*
 
 ### 2. 🎲 [Reward Randomization System](./Reward%20Randomization%20System)
-An enterprise-grade administration dashboard and backend engine designed for high-integrity reward distribution.
-*   **Backend (Clean Architecture):** Built with **Go & Gin Framework**, implementing a structured layer pattern (Controller, Service, Model) with **Bun ORM** and **PostgreSQL**.
-*   **Frontend (SPA/SSR):** Developed using **Nuxt 3 (Vue 3)**, **TypeScript**, and **Pinia** for efficient state management and optimized rendering.
-*   **Key Highlights:** Anti-collision draw mechanics (preventing duplicate winners), dynamic condition-based matching, bulk data handling, and structured logging.
+ระบบหลังบ้านและแดชบอร์ดบริหารจัดการห้องสุ่มรางวัลสำหรับงานเทศกาลระดับองค์กร (Enterprise Reward Engine)
+*   **Backend (Clean Architecture):** พัฒนาด้วย **Go & Gin Framework** แยกเลเยอร์ชัดเจน (Controller, Service, Model) ร่วมกับ **Bun ORM** และ **PostgreSQL** เพื่อความถูกต้องแม่นยำของข้อมูลรางวัล
+*   **Frontend (Dashboard):** พัฒนาด้วย **Nuxt 3 (Vue 3)**, **TypeScript** และ **Pinia** นำเสนอแอนิเมชันการสุ่มรางวัลที่น่าตื่นเต้นและแดชบอร์ดสรุปผลแบบเรียลไทม์
+*   *👉 รายละเอียดเชิงลึกและวิธีรันระบบ: [อ่านต่อที่คู่มือ Reward System](./Reward%20Randomization%20System/README.md)*
+
+### 3. 🏫 [Classroom Management System](./Classroom%20Management%20System)
+แอปพลิเคชันบนมือถือแบบ Cross-Platform สำหรับบริหารจัดการชั้นเรียนและบันทึกเวลาเข้าเรียน
+*   **Mobile Development:** พัฒนาด้วย **React Native** และ **Expo Managed Workflow** ร่วมกับ **TypeScript** 
+*   **Key Highlights:** สถาปัตยกรรมแบบ File-based routing ด้วย **Expo Router**, การออกแบบ Modular UI Components และการจัดการ State ภายในแอปพลิเคชันที่มีประสิทธิภาพสูง รองรับทั้งระบบปฏิบัติการ iOS และ Android
+*   *👉 รายละเอียดเชิงลึกและวิธีรันระบบ: [อ่านต่อที่คู่มือ Classroom Management](./Classroom%20Management%20System/README.md)*
 
 ---
 
-## 🛠️ Production-Grade Tech Stack
+## 🕹️ ไฮไลต์ฟีเจอร์ทางเทคนิค (Technical Core Features)
 
-### Frontend & Game Engineering
-*   **Core & Frameworks:** Nuxt 3 (Vue 3), TypeScript, Phaser 3, Pinia, Vue Router
-*   **UI/UX Component Ecosystem:** Tailwind CSS, DaisyUI, Nuxt UI, SweetAlert2
-*   **Data Parsing & Assets:** XLSX (Excel data processing), QRCode.vue, Axios
-
-### Backend & Cloud Infrastructure
-*   **Languages & Frameworks:** Go (Golang), Gin Gonic
-*   **Databases & ORM:** PostgreSQL, Bun ORM, Prisma ORM
-*   **Storage & Deployment:** Cloudinary (Asset Storage), Docker & Docker Compose, Linux (Fedora/Rocky environments), Render
+*   ⚡ **Real-Time Bidirectional Sync:** ใช้ WebSockets ในการสตรีมสถานะและควบคุมคิวการเล่นเกมของผู้เล่นในห้องพร้อมกันอย่างแม่นยำ
+*   🔒 **Secure Draw Engine:** อัลกอริทึมสุ่มรางวัลขั้นสูงที่มีระบบตรวจสอบสิทธิ์ ป้องกันการชนกันของข้อมูล (Anti-collision) และระบบบล็อกการสุ่มซ้ำเพื่อความโปร่งใส
+*   📊 **Asynchronous Bulk Data Parsing:** ระบบฝั่ง Nuxt 3 รองรับการนำเข้าข้อมูลผู้เข้าร่วมจำนวนมากผ่านไฟล์ Excel (`.xlsx`, `.xls`) และ CSV เพื่อลดภาระการทำงานของเครือข่าย
+*   📱 **Native Component Rendering:** การพัฒนา Mobile App ที่คงความสม่ำเสมอของ UI/UX บนอุปกรณ์ที่แตกต่างกัน และการวางโครงสร้าง Custom Hooks เพื่อแยก Business Logic
 
 ---
 
-## 🕹️ Technical Deep Dive & Key Features
+## 🛠️ ภาพรวมเทคโนโลยีที่เลือกใช้ทั้งหมด (Total Tech Stack)
 
-### 🔹 High-Concurrency Real-Time Synchronization
-*   **WebSocket State Machine:** The Go-based backend manages independent room sessions (`ws/`) ensuring real-time bidirectional messaging for interactive user verification and lobbies.
-*   **Sequential Gameplay Logic:** Implemented rigid state sync across distributed clients so all participants experience identical game stages and rules concurrently.
+### Client & Game Engineering
+*   **Web Frameworks:** Nuxt 3 (Vue 3), TypeScript, Pinia (State Management)
+*   **Mobile Framework:** React Native, Expo Router, EAS (Expo Application Services)
+*   **Game Development:** Phaser 3 (JavaScript)
+*   **Styling Ecosystem:** Tailwind CSS, DaisyUI, Nuxt UI
 
-### 🔹 Advanced Randomization Logic & Data Management
-*   **Data Ingestion Pipeline:** Supports asynchronous bulk imports of participant rosters via Excel (`.xlsx`, `.xls`) and CSV format parsing.
-*   **Secure Draw Engine:** Implemented condition-based filtering and strict constraints to guarantee deterministic reward caps, automated item exhaustion, and zero-duplicate draw histories.
-*   **Media & CDN Management:** Integrated Cloudinary API to dynamically stream and manage visual assets for prize carousels seamlessly.
+### Server & Infrastructure
+*   **Backend Languages:** Go (Golang), Gin Gonic Framework, Node.js
+*   **Database & ORM:** PostgreSQL, Bun ORM, Prisma ORM
+*   **Cloud Cloud Services:** Cloudinary API (สำหรับระบบฝากรูปภาพของรางวัล), Render
+*   **DevOps:** Docker, Docker Compose, Linux Environments
 
 ---
 
-## 📁 Repository Structure
+## 👥 ข้อมูลผู้พัฒนา (Developer Profiles)
 
-```text
-├── Real-Time Festival Prize Mini Game Platform/   # Core App (Game + Real-time WebSockets)
-│   ├── Frontend/                                 # Phaser 3 Client
-│   └── backend/                                  # Go (Lobby & Game State Server)
-└── Reward Randomization System/                  # Reward Engine (Nuxt 3 + Gin + Postgres)
-    ├── frontend/                                 # Dashboard & Animation Client
-    └── backend/                                  # Go Clean Architecture Server
+*   **Ammikaamy** — Full-Stack Software Engineer
+    *   *บทบาทหลัก:* ออกแบบโครงสร้างระบบหลังบ้านด้วยภาษา Go, พัฒนาระบบ Real-time WebSockets, พัฒนาแกนหลักของมินิเกมด้วย Phaser 3 และจัดการฐานข้อมูลสุ่มรางวัลร่วมกับสถาปัตยกรรมแบบจัดโครงสร้างสะอาดยืดหยุ่น
+    *   [GitHub Profile](https://github.com/Ammikaamy)
