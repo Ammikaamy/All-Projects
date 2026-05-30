@@ -167,12 +167,5 @@ Fill in your database and Cloudinary credentials
 go run main.go
 ```
 
----
 
-## 📩 Contact
 
-Developed by **Palmy (Mata)**  
-Email: pathipat.mattra@gmail.com  
-GitHub: [github.com/pathipat11](https://github.com/pathipat11)
-
----
